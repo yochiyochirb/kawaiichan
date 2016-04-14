@@ -21,6 +21,7 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'tapp', git: 'https://github.com/5t111111/tapp.git', branch: 'add-decoration-feature'
   gem 'web-console', '~> 3.0'
 end
 
