@@ -1,14 +1,6 @@
 Rails.application.routes.draw do
-  get 'oauths/oauth'
-
-  get 'oauths/callback'
-
   root to: 'users#index'
-  resources :sessions
-  resources :users
-
-  get 'login' => 'sessions#new', as: :login
-  post 'logout' => 'sessions#destroy', as: :logout
+  resources :users, only: %i( index show )
 
   post 'oauth/callback' => 'oauths#callback'
   get 'oauth/callback' => 'oauths#callback'
