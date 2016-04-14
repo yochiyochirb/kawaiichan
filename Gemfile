@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug'
+  gem 'minitest-stub_any_instance'
 end
 
 group :development do
@@ -24,5 +25,4 @@ group :development do
   gem 'tapp', git: 'https://github.com/5t111111/tapp.git', branch: 'add-decoration-feature'
   gem 'web-console', '~> 3.0'
 end
-
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
