@@ -151,7 +151,7 @@ Rails.application.config.sorcery.configure do |config|
   config.github.key = 'bfaa3afbf3a983cdd656'
   config.github.secret = 'c3cdc718ea1b437dde41115d7830a29765d1f740'
   config.github.callback_url = 'http://localhost:3000/oauth/callback?provider=github'
-  config.github.user_info_mapping = { email: 'name' }
+  config.github.user_info_mapping = { name: 'name' }
 
   # For information about JIRA API:
   # https://developer.atlassian.com/display/JIRADEV/JIRA+REST+API+Example+-+OAuth+authentication
