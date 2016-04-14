@@ -2,9 +2,8 @@ Rails.application.routes.draw do
   root to: 'users#index'
   resources :users, only: %i( index show )
 
-  post 'oauth/callback' => 'oauths#callback'
-  get 'oauth/callback' => 'oauths#callback'
-  get 'oauth/:provider' => 'oauths#oauth', as: :auth_at_provider
+  get 'oauth/callback' => 'oauths#callback', as: :oauth_callback
+  get 'oauth/:provider' => 'oauths#oauth', as: :oauth_login
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
