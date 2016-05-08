@@ -15,6 +15,8 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug'
+  gem 'minitest-stub_any_instance'
+  gem 'tapp', git: 'https://github.com/5t111111/tapp.git', branch: 'add-decoration-feature'
 end
 
 group :development do

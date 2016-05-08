@@ -10,7 +10,7 @@ html
   body
     #nav
     div
-      = link_to 'Login with GitHub', auth_at_provider_path(provider: :github)
+      = link_to 'Login with GitHub', oauth_login_path(provider: :github)
     div
       p#notice
         = flash[:notice]
