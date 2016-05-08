@@ -4,5 +4,7 @@ class User < ActiveRecord::Base
   end
 
   has_many :authentications, dependent: :destroy
+  has_many :posts
+
   accepts_nested_attributes_for :authentications
 end
