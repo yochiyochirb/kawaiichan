@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'users#index'
   resources :users, only: %i( index show )
+  resources :posts
 
   get 'oauth/callback' => 'oauths#callback', as: :oauth_callback
   get 'oauth/:provider' => 'oauths#oauth', as: :oauth_login
