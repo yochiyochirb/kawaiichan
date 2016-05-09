@@ -4,19 +4,16 @@ table
   thead
     tr
       th Title
-      th Body
       th User
       th
       th
       th
-
   tbody
     - @posts.each do |post|
       tr
+        td = link_to post.title, post
         td = post.title
-        td = post.body
         td = post.user.name
-        td = link_to 'Show', post
         td = link_to 'Edit', edit_post_path(post)
         td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
 
