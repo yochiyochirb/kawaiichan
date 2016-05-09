@@ -99,6 +99,7 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    normalize-rails (4.1.1)
     oauth (0.5.1)
     oauth2 (1.1.0)
       faraday (>= 0.8, < 0.10)
@@ -204,6 +205,7 @@ DEPENDENCIES
   kramdown
   listen (~> 3.0.5)
   minitest-stub_any_instance
+  normalize-rails
   puma
   rails (>= 5.0.0.beta3, < 5.1)
   rouge
