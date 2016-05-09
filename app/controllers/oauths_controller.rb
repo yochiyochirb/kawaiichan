@@ -8,13 +8,13 @@ class OauthsController < ApplicationController
   def callback
     provider = oauth_params[:provider]
     if login_from(provider)
-      redirect_to root_path, notice: 'Logged in with GitHub'
+      redirect_to posts_path, notice: 'Logged in with GitHub'
     else
       begin
         user = create_from(provider)
         reset_session # protect from session fixation attack
         auto_login(user)
-        redirect_to root_path, notice: 'Logged in with GitHub'
+        redirect_to posts_path, notice: 'Logged in with GitHub'
       rescue
         redirect_to root_path, alert: 'Failed to login with GitHub'
       end
