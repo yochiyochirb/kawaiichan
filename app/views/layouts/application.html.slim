@@ -8,9 +8,7 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
   body
-    #nav
-    div
-      = link_to 'Login with GitHub', oauth_login_path(provider: :github)
+    = render 'layouts/header'
     div
       p#notice
         = flash[:notice]

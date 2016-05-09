@@ -1,0 +1,10 @@
+header
+  nav.navigation
+    ul.navigation__list
+      li.navigation__item
+        = link_to 'kawaiichan', root_path
+      li.navigation__item
+        - if logged_in?
+          = link_to 'Logout', logout_path, method: :post
+        - else
+          = link_to 'Login with GitHub', oauth_login_path(provider: :github)
