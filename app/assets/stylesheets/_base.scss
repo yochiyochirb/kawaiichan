@@ -1,0 +1,41 @@
+body {
+  color: #3b3b3b;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+main {
+  margin: 0 auto;
+  padding: 15px;
+  width: 960px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #222324;
+  width: 100%;
+
+  thead {
+    th {
+      border: 1px solid #d3d6db;
+      border-width: 0 0 2px;
+      text-align: left;
+    }
+  }
+
+  tbody {
+    td {
+      border: 1px solid #d3d6db;
+      border-width: 0 0 1px;
+      padding: 8px 10px;
+      vertical-align: top;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #1fc8db;
+}

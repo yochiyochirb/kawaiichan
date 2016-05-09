@@ -1,9 +1,42 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.post__title {
+  border-bottom: 1px solid rgba(228,229,233,0.96);
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
 
-// GitHub style syntax highlighter for rouge
+.post {
+  h2 {
+    background-image: image-url('kawaiichan.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 3.4rem 0;
+    padding-left: 50px;
+    vertical-align: baseline;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+}
+
 .highlight {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 2rem auto;
+  padding: 0.9rem;
+  border: 1px solid #ddd;
+  
+  // GitHub style syntax highlighter for rouge
   .hll { background-color: #f8f8f8; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
   .c { color: #999988; font-style: italic; }
   .err { color: #a61717; background-color: #e3d2d2; }
