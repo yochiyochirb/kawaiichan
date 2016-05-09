@@ -1,11 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  body: MyText
-  user: one
+alice_in_wonderland:
+  title: Alice In Wonderland
+  body: |
+    # Down the Rabbit-Hole
 
-two:
-  title: MyString
-  body: MyText
-  user: two
+    ## Beginning
+
+    Alice was beginning to get very tired of sitting by her sister on the bank,
+    and of having nothing to do.
+
+    ## Considering
+
+    - so she was considering
+    - in her own mind
+  user: alice
+
+fenced_code_block:
+  title: Fenced Code Block
+  body: |
+    ```ruby
+    def foo
+      puts 'foo'
+    end
+    ```
+  user: alice
