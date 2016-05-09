@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @rendered_body = Kramdown::Document.new(@post.body).to_html
   end
 
   def new
