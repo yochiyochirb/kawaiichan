@@ -5,10 +5,10 @@ p
   = @post.title
 p
   strong Body:
-  = @post.body
+  == @rendered_body
 p
   strong User:
-  = @post.user
+  = @post.user.name
 
 = link_to 'Edit', edit_post_path(@post)
 '|

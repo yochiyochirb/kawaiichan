@@ -15,7 +15,7 @@ table
       tr
         td = post.title
         td = post.body
-        td = post.user
+        td = post.user.name
         td = link_to 'Show', post
         td = link_to 'Edit', edit_post_path(post)
         td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
