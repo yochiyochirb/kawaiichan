@@ -1,2 +1,4 @@
 alice:
-  name: Alice
+  nickname: alice
+  provider: github
+  uid: 42
