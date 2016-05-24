@@ -11,5 +11,14 @@
     = f.text_field :title
   .field
     = f.label :body
-    = f.text_area :body
+    = f.text_area :body, id: 'source'
   .actions = f.submit
+
+button#show-preview Preview
+
+#preview
+
+javascript:
+  $('#show-preview').click(function() {
+    App.post.preview($('#source').val());
+  });
