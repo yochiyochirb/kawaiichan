@@ -7,6 +7,7 @@ App.post = App.cable.subscriptions.create "PostChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
+    alert data['preview_html']
 
-  preview: ->
-    @perform 'preview'
+  preview: (source) ->
+    @perform 'preview', source: source
