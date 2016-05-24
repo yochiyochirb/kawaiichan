@@ -5,7 +5,7 @@
     == @post.body_html
   .post_author
     | posted by 
-    = @post.user.name
+    = @post.user.nickname
   
   = link_to 'Edit', edit_post_path(@post)
   '|

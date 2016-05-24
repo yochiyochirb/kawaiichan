@@ -30,7 +30,6 @@ and of having nothing to do.</p>
 </code></pre>
 </div>
     EOS
-    puts post.body_html
     assert_equal(expected, post.body_html)
   end
 end

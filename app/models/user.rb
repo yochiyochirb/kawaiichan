@@ -1,10 +1,9 @@
 class User < ActiveRecord::Base
-  authenticates_with_sorcery! do |config|
-    config.authentications_class = Authentication
-  end
-
-  has_many :authentications, dependent: :destroy
   has_many :posts
 
-  accepts_nested_attributes_for :authentications
+  def self.find_or_create_from(auth)
+    find_or_create_by(provider: auth[:provider], uid: auth[:uid]) do |user|
+      user.nickname = auth[:info][:nickname]
+    end
+  end
 end

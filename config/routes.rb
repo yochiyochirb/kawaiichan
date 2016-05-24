@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   root to: 'users#index'
   resources :users, only: %i( index show )
-  resources :sessions, only: :destroy
   resources :posts
 
-  get 'oauth/callback' => 'oauths#callback', as: :oauth_callback
-  get 'oauth/:provider' => 'oauths#oauth', as: :oauth_login
-  post 'logout' => 'sessions#destroy', as: :logout
+  get 'auth/:provider/callback', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+  get 'auth/failure', to: 'sessions#failure'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
