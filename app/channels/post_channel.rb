@@ -9,7 +9,6 @@ class PostChannel < ApplicationCable::Channel
   end
 
   def preview(data)
-    preview_partial = ApplicationController.renderer.render partial: 'posts/preview', locals: { source: data['source'] }
-    ActionCable.server.broadcast 'post_channel', preview_html: preview_partial
+    PostPreviewJob.perform_later(source: data['source'])
   end
 end
