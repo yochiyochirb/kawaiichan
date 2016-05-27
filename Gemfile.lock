@@ -48,6 +48,11 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.0.0)
+    autoprefixer-rails (6.3.6)
+      execjs
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     browserify-rails (3.0.0)
       railties (>= 4.0.0, < 5.0)
       sprockets (>= 3.5.2)
@@ -102,7 +107,6 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
-    normalize-rails (4.1.1)
     oauth2 (1.1.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0, < 1.5.2)
@@ -205,6 +209,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   browserify-rails
   byebug
   coffee-rails (~> 4.1.0)
@@ -213,12 +218,11 @@ DEPENDENCIES
   kramdown
   listen (~> 3.0.5)
   minitest-stub_any_instance
-  normalize-rails
   omniauth-github
   puma
   rails (>= 5.0.0.beta3, < 5.1)
   rouge
-  sass-rails (~> 5.0)
+  sass-rails
   slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)
