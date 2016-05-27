@@ -7,7 +7,7 @@ App.post = App.cable.subscriptions.create "PostChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    $('#preview').html(data['preview_html'])
+    $('#post-preview').html(data['preview_html'])
 
   preview: (source) ->
     @perform 'preview', source: source
