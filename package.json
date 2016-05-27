@@ -1,0 +1,8 @@
+{
+  "name": "kawaiichan",
+  "description": ":new_moon_with_face:",
+  "dependencies": {
+    "browserify": "^13.0.1",
+    "browserify-incremental": "^3.1.1"
+  }
+}
