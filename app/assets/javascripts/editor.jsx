@@ -13,7 +13,7 @@ var PostInput = React.createClass({
   render: function(){
     return (
       <div>
-        <textarea id="post-input" name="post[body]" onKeyDown={this.handleKeyDown} defaultValue={this.props.body}></textarea>
+        <textarea rows="35" id="post-input" className="form-control" name="post[body]" onKeyDown={this.handleKeyDown} defaultValue={this.props.body}></textarea>
       </div>
     )
   }
