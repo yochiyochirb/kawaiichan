@@ -7,14 +7,14 @@
           - @post.errors.full_messages.each do |message|
             li = message
     .form-group
-      = f.label :title
-      = f.text_field :title, class: 'form-control'
-    #post-input
+      #editor
     .actions
       = f.submit
 
 .col-xs-6
-  #post-preview
+  .post
+    .post__body
+      #post-preview
 
 javascript:
-  window.Markdown = (new window.Editor.Editor(document.getElementById('post-input'), #{{@post.to_json}})).render()
+  window.Markdown = (new window.Editor.Editor(document.getElementById('editor'), #{{@post.to_json}})).render()

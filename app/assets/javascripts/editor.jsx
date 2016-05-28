@@ -1,19 +1,39 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-var PostInput = React.createClass({
+var PostTitle = React.createClass({
   componentDidMount: function(event){
-    App.post.preview(document.getElementById('post-input').value);
+    App.post.preview(document.getElementById('post_title').value);
   },
 
   handleKeyDown: function(event){
-    App.post.preview(event.target.value);
+    App.post.preview({ 'title': event.target.value, 'body': document.getElementById('post_body').value });
   },
 
   render: function(){
     return (
-      <div>
-        <textarea rows="35" id="post-input" className="form-control" name="post[body]" onKeyDown={this.handleKeyDown} defaultValue={this.props.body}></textarea>
+      <div className="form-group">
+        <label htmlFor="post_title">Title</label>
+        <input id="post_title" className="form-control" type="text" name="post[title]" onKeyDown={this.handleKeyDown} defaultValue={this.props.title}></input>
+      </div>
+    )
+  }
+});
+
+var PostBody = React.createClass({
+  componentDidMount: function(event){
+    App.post.preview(document.getElementById('post_body').value);
+  },
+
+  handleKeyDown: function(event){
+    App.post.preview({ 'title': document.getElementById('post_title').value, 'body': event.target.value });
+  },
+
+  render: function(){
+    return (
+      <div className="form-group">
+        <label htmlFor="post_body">Body</label>
+        <textarea rows="35" id="post_body" className="form-control" name="post[body]" onKeyDown={this.handleKeyDown} defaultValue={this.props.body}></textarea>
       </div>
     )
   }
@@ -39,8 +59,8 @@ var Markdown = React.createClass({
   render: function(){
     return (
       <div>
-        <PostInput {...this.props}/>
-        <PostPreview ref="preview" {...this.props} />
+        <PostTitle {...this.props}/>
+        <PostBody {...this.props}/>
       </div>
     )
   }
