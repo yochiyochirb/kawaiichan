@@ -1,14 +1,14 @@
-.post__title {
-  border-bottom: 1px solid rgba(228,229,233,0.96);
-  font-size: 2.2rem;
-  font-weight: bold;
-  line-height: 1.5;
-  margin-bottom: 50px;
-  margin-top: 40px;
-  padding-bottom: 40px;
-}
-
 .post {
+  h1 {
+    border-bottom: 1px solid rgba(228,229,233,0.96);
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+  }
+
   h2 {
     background-image: image-url('kawaiichan.png');
     background-repeat: no-repeat;
