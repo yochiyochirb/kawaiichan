@@ -26,13 +26,17 @@ var PostEditor = React.createClass({
   render: function() {
     return (
       <div>
-        <div className="form-group">
-          <label htmlFor="post_title">Title</label>
-          <input id="post_title" className="form-control" type="text" name="post[title]" onChange={this.handleChange} defaultValue={this.props.title}></input>
+        <div className="row">
+          <div className="input-field col s12">
+            <label htmlFor="post_title">Title</label>
+            <input id="post_title" className="validate" type="text" name="post[title]" onChange={this.handleChange} defaultValue={this.props.title}></input>
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="post_body">Body</label>
-          <textarea rows="35" id="post_body" className="form-control" name="post[body]" onChange={this.handleChange} defaultValue={this.props.body}></textarea>
+        <div className="row">
+          <div className="input-field col s12">
+            <label htmlFor="post_body">Body</label>
+            <textarea id="post_body" className="materialize-textarea" name="post[body]" onChange={this.handleChange} defaultValue={this.props.body}></textarea>
+          </div>
         </div>
       </div>
     )
