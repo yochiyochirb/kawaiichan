@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
   before_action :require_login, only: :destroy
 
+  def new
+  end
+
   def create
     auth = request.env['omniauth.auth']
     user = User.find_or_create_from(auth)
@@ -10,10 +13,10 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to root_url, notice: 'Logged out'
+    redirect_to login_url, notice: 'Logged out'
   end
 
   def failure
-    redirect_to root_url, alert: 'Failed to login'
+    redirect_to login_url, alert: 'Failed to login'
   end
 end
