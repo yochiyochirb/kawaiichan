@@ -6,5 +6,3 @@ header
       li.navigation__item
         - if logged_in?
           = link_to 'Logout', logout_path, method: :delete
-        - else
-          = link_to 'Login with GitHub', 'auth/github'

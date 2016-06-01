@@ -1,8 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
+@import 'font-awesome';
 
 @import 'materialize';
 
+@import 'variables';
 @import 'base';
 @import 'header';
 
+@import 'sessions';
 @import 'posts';

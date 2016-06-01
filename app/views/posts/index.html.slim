@@ -1,22 +1,22 @@
-h1 Listing posts
+.container
+  .row
+    .col.s12
+      = link_to new_post_path, class: 'waves-effect waves-light btn' do
+        = fa_icon 'pencil'
+        |  New Post
+      table.striped
+        thead
+          tr
+            th Title
+            th Author
+            th
+            th
+        tbody
+          - @posts.each do |post|
+            tr
+              td = link_to post.title, post
+              td = post.user.nickname
+              td = link_to 'Edit', edit_post_path(post)
+              td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-table
-  thead
-    tr
-      th Title
-      th User
-      th
-      th
-      th
-  tbody
-    - @posts.each do |post|
-      tr
-        td = link_to post.title, post
-        td = post.title
-        td = post.user.nickname
-        td = link_to 'Edit', edit_post_path(post)
-        td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Post', new_post_path
+      br

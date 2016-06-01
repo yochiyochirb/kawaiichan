@@ -1,0 +1,30 @@
+.login-screen {
+  background-color: $ninjin;
+  background-image: url('kawaiichan-bg.png');
+  font-family: Lato;
+  height: 100%;
+  left: 0;
+  padding-top: 100px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+
+  .login-screen__logo,
+  .login-screen__login-link {
+    color: #fff;
+  }
+
+  .login-screen__logo {
+    font-size: 5rem;
+  }
+
+  .login-screen__login-link {
+    font-size: 2rem;
+
+    &:hover {
+      color: $link-blue;
+    }
+  }
+}
+
