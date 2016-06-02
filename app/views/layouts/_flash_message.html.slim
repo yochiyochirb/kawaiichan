@@ -1,0 +1,6 @@
+- messages = flash.to_hash.slice(*%w(notice alert))
+- if messages.any?
+  .flash-message
+    - messages.each do |flash_type, message|
+      div(class="flash-message__#{flash_type}")
+        = message

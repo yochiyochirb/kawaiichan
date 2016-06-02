@@ -1,0 +1,19 @@
+.flash-message {
+  margin-top: 40px;
+
+  %flash-message-padding {
+    padding: 20px;
+  }
+
+  .flash-message__notice {
+    @extend %flash-message-padding;
+    @extend .blue, .lighten-5;
+    @extend .blue-text, .text-darken-3;
+  }
+
+  .flash-message__alert {
+    @extend %flash-message-padding;
+    @extend .red, .lighten-5;
+    @extend .red-text, .text-darken-3;
+  }
+}
