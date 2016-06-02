@@ -1,6 +1,5 @@
 .row
   == render 'form'
-
-= link_to 'Show', @post
-'|
-= link_to 'Back', posts_path
+.row
+  .col.s12
+    = link_to 'Delete', @post, class: 'btn waves-effect waves-light btn-danger', data: { confirm: 'Are you sure?' }, method: :delete
