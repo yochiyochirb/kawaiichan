@@ -3,7 +3,6 @@
     = @post.title
   .post__body
     == markdown_to_html(emojify(@post.body))
-  hr
-  .post_author
+  .post__author
     | posted by
     = " #{@post.user.nickname}"
