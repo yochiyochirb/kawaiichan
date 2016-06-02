@@ -11,5 +11,13 @@ main {
 }
 
 i {
-  margin-right: 0.5rem;
+  margin-right: .5rem;
+}
+
+.btn-danger {
+  background-color: darken($ninjin, 5%);
+
+  &:hover {
+    background-color: $ninjin;
+  }
 }
