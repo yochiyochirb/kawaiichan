@@ -1,0 +1,12 @@
+.col.s12.m4
+  .card.blue-grey.darken-1
+     .card-content.white-text
+       span.card-title
+         = link_to post.title, post_path(post)
+       .card-body
+         == truncate_html(sanitize(markdown_to_html(emojify(post.body)), tags: []),
+                          length: 64,
+                          omission: ' ...' ) if post.body.present?
+     .card-action
+       = link_to 'Show Post', post_path(post)
+       = link_to 'Edit Post', edit_post_path(post)
