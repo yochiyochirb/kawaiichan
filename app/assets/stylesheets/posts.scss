@@ -4,6 +4,33 @@
   margin-top: 20px;
 }
 
+.post-card {
+  margin-top: 30px;
+}
+
+.card {
+  .card-content {
+    height: 150px;
+    overflow: hidden;
+  }
+
+  .card-title {
+    a {
+      color: #fff;
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+
+  .card-body {
+    h1, h2, h3, h4 {
+      font-size: 1rem;
+    }
+  }
+}
+
 .post {
   h1 {
     font-size: 2.4rem;

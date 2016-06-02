@@ -38,4 +38,15 @@ and of having nothing to do.</p>
 
     assert_equal(expected, markdown_to_html(post.body))
   end
+
+  test 'should return blank string if source is blank' do
+    post = posts(:alice_in_wonderland)
+    expected = ''
+
+    post.body = ''
+    assert_equal(expected, markdown_to_html(post.body))
+
+    post.body = nil
+    assert_equal(expected, markdown_to_html(post.body))
+  end
 end

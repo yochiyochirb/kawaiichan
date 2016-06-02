@@ -5,14 +5,11 @@ html
       | Kawaiichan
     = csrf_meta_tags
     = action_cable_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
   body
     = render 'layouts/header'
-    div
-      p#notice
-        = flash[:notice]
-      p#alert
-        = flash[:alert]
-    main
-      = yield
+    .container
+      = render 'layouts/flash_message'
+      main
+        = yield
