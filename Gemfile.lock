@@ -190,6 +190,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.2)
+    truncate_html (0.9.3)
     turbolinks (5.0.0.beta2)
       turbolinks-source
     turbolinks-source (5.0.0.beta4)
@@ -230,6 +231,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   tapp!
+  truncate_html
   turbolinks (~> 5.x)
   tzinfo-data
   uglifier (>= 1.3.0)
