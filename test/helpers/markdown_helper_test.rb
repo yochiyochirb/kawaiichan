@@ -40,12 +40,7 @@ and of having nothing to do.</p>
   end
 
   test 'should return blank string if source is blank' do
-    post = posts(:alice_in_wonderland)
-
-    post.body = ''
-    assert_equal('', markdown_to_html(post.body))
-
-    post.body = nil
-    assert_equal('', markdown_to_html(post.body))
+    assert_equal('', markdown_to_html(''))
+    assert_equal('', markdown_to_html(nil))
   end
 end

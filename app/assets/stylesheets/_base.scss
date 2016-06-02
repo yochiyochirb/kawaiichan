@@ -21,3 +21,17 @@ i {
     background-color: $ninjin;
   }
 }
+
+.error-explanation {
+  padding: 20px;
+  @extend .red, .lighten-5;
+  @extend .red-text, .text-darken-2;
+
+  ul {
+    padding-left: 2rem;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+}

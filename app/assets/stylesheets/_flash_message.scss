@@ -8,12 +8,12 @@
   .flash-message__notice {
     @extend %flash-message-padding;
     @extend .blue, .lighten-5;
-    @extend .blue-text, .text-darken-3;
+    @extend .blue-text, .text-darken-2;
   }
 
   .flash-message__alert {
     @extend %flash-message-padding;
     @extend .red, .lighten-5;
-    @extend .red-text, .text-darken-3;
+    @extend .red-text, .text-darken-2;
   }
 }
