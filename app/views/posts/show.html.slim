@@ -1,8 +1,15 @@
-.post
-  h1.post__title
-    = @post.title
-  .post__body
-    == markdown_to_html(emojify(@post.body))
-  .post__author
-    | posted by
-    = " #{@post.user.nickname}"
+.row
+  .col.s12
+    .post
+      h1.post__title
+        = @post.title
+      .post__body
+        == markdown_to_html(emojify(@post.body))
+      .post__author
+        | posted by
+        = " #{@post.user.nickname}"
+.row
+  .col.s12
+    = link_to edit_post_path(@post), class: 'waves-effect waves-light btn' do
+      = fa_icon 'pencil-square-o'
+      | Edit This Post

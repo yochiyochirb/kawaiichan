@@ -9,16 +9,12 @@
   top: 0;
   width: 100%;
 
-  .login-screen__logo,
-  .login-screen__login-link {
-    color: $white;
-  }
-
   .login-screen__logo {
     font-size: 5rem;
   }
 
   .login-screen__login-link {
+    color: $white;
     font-size: 2rem;
 
     &:hover {
