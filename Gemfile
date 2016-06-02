@@ -17,7 +17,6 @@ gem 'sass-rails'
 gem 'slim-rails'
 gem 'sqlite3'
 gem 'truncate_html'
-gem 'turbolinks', '~> 5.x'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
