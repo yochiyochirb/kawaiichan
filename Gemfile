@@ -16,7 +16,6 @@ gem 'puma'
 gem 'rouge'
 gem 'sass-rails'
 gem 'slim-rails'
-gem 'sqlite3'
 gem 'truncate_html'
 gem 'uglifier', '>= 1.3.0'
 
