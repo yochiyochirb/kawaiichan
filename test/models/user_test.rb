@@ -3,7 +3,7 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
   test 'find_or_create_from should create user when user does not exist' do
     auth_hash = {
-      provider: 'github',
+      provider: 'slack',
       uid: 666,
       info: {
         nickname: 'madhatter'
@@ -21,7 +21,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_or_create_from should not create user when user already exist' do
     auth_hash = {
-      provider: 'github',
+      provider: 'slack',
       uid: 42,
       info: {
         nickname: 'alice'

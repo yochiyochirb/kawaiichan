@@ -10,14 +10,14 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-# Stub GitHub OAuth login with OmniAuth mock
-def stub_github_login_with(nickname)
+# Stub Slack OAuth login with OmniAuth mock
+def stub_slack_login_with(nickname)
   user = User.find_by!(nickname: nickname)
 
   OmniAuth.config.test_mode = true
 
-  OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(
-    provider: 'github',
+  OmniAuth.config.mock_auth[:slack] = OmniAuth::AuthHash.new(
+    provider: 'slack',
     uid: user.uid,
     info: {
       nickname: user.nickname

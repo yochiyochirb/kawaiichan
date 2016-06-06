@@ -2,15 +2,15 @@ require 'test_helper'
 
 feature 'authorization' do
   scenario 'can access posts page when logging in' do
-    stub_github_login_with 'alice'
+    stub_slack_login_with 'alice'
 
     visit login_path
-    click_link 'Login with GitHub'
+    click_link 'Login with Slack'
 
     visit posts_path
 
-    within '.login-screen__login-link' do
-      page.must_have_content 'Login with GitHub'
+    within '.card-title', match: :first do
+      page.must_have_content posts(:alice_in_wonderland).title
     end
   end
 
@@ -22,8 +22,7 @@ feature 'authorization' do
     end
 
     within '.login-screen__login-link' do
-      page.must_have_content 'Login with GitHub'
+      page.must_have_content 'Login with Slack'
     end
   end
 end
-
