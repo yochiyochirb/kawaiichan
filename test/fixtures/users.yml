@@ -1,4 +1,4 @@
 alice:
   nickname: alice
-  provider: github
+  provider: slack
   uid: 42
