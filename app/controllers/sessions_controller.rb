@@ -7,12 +7,14 @@ class SessionsController < ApplicationController
   def create
     auth = request.env['omniauth.auth']
     user = User.find_or_create_from(auth)
-    session[:user_id] = user.id
+    # Use cookies for ActionCable authorization
+    cookies.signed[:user_id] = session[:user_id] = user.id
     redirect_to root_url, notice: "Logged in with #{auth['provider'].titleize}"
   end
 
   def destroy
     reset_session
+    cookies.delete(:user_id)
     redirect_to login_url, notice: 'Logged out'
   end
 

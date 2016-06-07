@@ -1,7 +1,8 @@
 # Be sure to restart your server when you modify this file. Action Cable runs in a loop that does not support auto reloading.
 class PostChannel < ApplicationCable::Channel
   def subscribed
-    stream_from 'post_channel'
+    @post_channel_id = SecureRandom.hex
+    stream_from "post_channel_#{@post_channel_id}"
   end
 
   def unsubscribed
@@ -9,6 +10,7 @@ class PostChannel < ApplicationCable::Channel
   end
 
   def preview(data)
-    PostPreviewJob.perform_later(source: data['source'])
+    PostPreviewJob.perform_later(channel_id: @post_channel_id,
+                                 source: data['source'])
   end
 end
