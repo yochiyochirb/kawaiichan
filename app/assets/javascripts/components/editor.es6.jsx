@@ -6,6 +6,11 @@ class Editor extends React.Component {
     });
   }
 
+  componentDidMount() {
+    // Workaround for triggering materialize autoresizing function on TextArea
+    $('#post_body').keyup();
+  }
+
   render() {
     return (
       <div>
