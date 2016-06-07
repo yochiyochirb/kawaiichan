@@ -1,8 +1,9 @@
 class PostPreviewJob < ApplicationJob
   queue_as :default
 
-  def perform(source:)
-    ActionCable.server.broadcast 'post_channel', preview_html: render_preview(source)
+  def perform(user:, source:)
+    ActionCable.server.broadcast "post_channel_#{user.id}",
+                                 preview_html: render_preview(source)
   end
 
   private
