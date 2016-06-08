@@ -8,7 +8,13 @@ class SessionsController < ApplicationController
 
   def create
     auth = request.env['omniauth.auth']
+
+    unless User.team_member?(auth[:uid])
+      return redirect_to login_url, alert: 'Only team member can login'
+    end
+
     user = User.find_or_create_from(auth)
+
     # Use cookies for ActionCable authorization
     cookies.signed[:user_id] = session[:user_id] = user.id
     redirect_to root_url, notice: "Logged in with #{auth['provider'].titleize}"

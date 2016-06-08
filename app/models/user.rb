@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Authenticator
+
   has_many :posts
 
   def self.find_or_create_from(auth)
