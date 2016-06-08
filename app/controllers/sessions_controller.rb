@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
   before_action :require_login, only: :destroy
 
+  layout 'sessions'
+
   def new
   end
 
