@@ -31,11 +31,5 @@ class UserTest < ActiveSupport::TestCase
     assert_no_difference('User.count') do
       User.find_or_create_from(auth_hash)
     end
-
-    user = User.find_by(nickname: 'alice')
-
-    assert_equal auth_hash[:provider], user.provider
-    assert_equal auth_hash[:uid].to_s, user.uid
-    assert_equal auth_hash[:info][:nickname], user.nickname
   end
 end
