@@ -129,6 +129,39 @@ http_interactions:
               "is_ultra_restricted": false,
               "is_bot": false,
               "has_2fa": false
+            },
+            {
+              "id": "U88888888",
+              "team_id": "T66666666",
+              "name": "bill",
+              "deleted": true,
+              "status": null,
+              "color": "9f69e7",
+              "real_name": "Bill",
+              "tz": "Asia/Tokyo",
+              "tz_label": "Japan Standard Time",
+              "tz_offset": 32400,
+              "profile": {
+                "avatar_hash": "888888888888",
+                "real_name": "",
+                "real_name_normalized": "",
+                "email": "bill@example.com",
+                "image_24": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_24.jpg",
+                "image_32": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_32.jpg",
+                "image_48": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_48.jpg",
+                "image_72": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_72.jpg",
+                "image_192": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_192.jpg",
+                "image_512": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_192.jpg",
+                "image_1024": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_192.jpg",
+                "image_original": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_original.jpg"
+              },
+              "is_admin": false,
+              "is_owner": false,
+              "is_primary_owner": false,
+              "is_restricted": false,
+              "is_ultra_restricted": false,
+              "is_bot": false,
+              "has_2fa": false
             }
           ],
           "cache_ts": 1465357297
