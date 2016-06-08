@@ -7,7 +7,7 @@
 @import 'base';
 @import 'flash_message';
 
-.login-screen {
+.login {
   background-color: $ninjin;
   background-image: image-url('kawaiichan-bg.png');
   height: 100%;
@@ -18,11 +18,11 @@
   top: 0;
   width: 100%;
 
-  .login-screen__logo {
+  .login__logo {
     font-size: 5rem;
   }
 
-  .login-screen__login-link {
+  .login__login-link {
     color: $white;
     font-size: 2rem;
 
