@@ -21,7 +21,7 @@ feature 'authorization' do
       page.must_have_content 'Please login'
     end
 
-    within '.login-screen__login-link' do
+    within '.login__login-link' do
       page.must_have_content 'Login with Slack'
     end
   end

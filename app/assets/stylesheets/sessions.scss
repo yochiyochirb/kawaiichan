@@ -1,4 +1,13 @@
-.login-screen {
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+@import 'font-awesome';
+@import 'materialize';
+
+@import 'variables';
+@import 'base';
+@import 'flash_message';
+
+.login {
   background-color: $ninjin;
   background-image: image-url('kawaiichan-bg.png');
   height: 100%;
@@ -9,11 +18,11 @@
   top: 0;
   width: 100%;
 
-  .login-screen__logo {
+  .login__logo {
     font-size: 5rem;
   }
 
-  .login-screen__login-link {
+  .login__login-link {
     color: $white;
     font-size: 2rem;
 
@@ -22,4 +31,3 @@
     }
   }
 }
-

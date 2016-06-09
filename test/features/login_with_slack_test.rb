@@ -4,7 +4,7 @@ feature 'login with slack' do
   scenario 'must have login link' do
     visit login_path
 
-    within '.login-screen__login-link' do
+    within '.login__login-link' do
       page.must_have_content 'Login with Slack'
     end
   end
