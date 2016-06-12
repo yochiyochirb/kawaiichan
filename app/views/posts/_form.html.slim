@@ -6,9 +6,8 @@
         ul
           - @post.errors.full_messages.each do |message|
             li = message
-    #editor
+    = react_component('Editor', title: @post.title, body: @post.body)
     .actions
-      / = f.submit
       = button_tag type: :submit, class: 'btn waves-effect waves-light' do
         | Save
 
@@ -16,6 +15,3 @@
   .post
     .post__body
       #post-preview
-
-javascript:
-  window.Markdown = (new window.Editor.Editor(document.getElementById('editor'), #{{@post.to_json}})).render()

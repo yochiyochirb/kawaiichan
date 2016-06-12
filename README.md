@@ -6,19 +6,7 @@
 
 :new_moon_with_face:
 
-```
-$ npm install
-$ bundle install
-```
-
 ## Heroku deployment
-
-Add buildpacks:
-
-```
-$ heroku buildpacks:add --index 1 heroku/nodejs
-$ heroku buildpacks:add --index 2 heroku/ruby
-```
 
 Set environment variables (Change values for your app):
 
