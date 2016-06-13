@@ -32,4 +32,18 @@ class ActiveSupport::TestCase
       }
     )
   end
+
+  # Stub whole authentication includes:
+  # - Slack OAuth login
+  # - Visiting login page
+  # - Team checking
+  def stub_authentication_with(nickname)
+    stub_slack_login_with(nickname)
+
+    visit login_path
+
+    VCR.use_cassette 'slack/users_info' do
+      click_link 'Login with Slack'
+    end
+  end
 end

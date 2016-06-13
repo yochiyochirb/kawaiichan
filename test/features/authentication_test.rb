@@ -2,13 +2,7 @@ require 'test_helper'
 
 feature 'Authentication' do
   scenario 'Can access posts page when logging in' do
-    stub_slack_login_with 'alice'
-
-    visit login_path
-
-    VCR.use_cassette 'slack/users_info' do
-      click_link 'Login with Slack'
-    end
+    stub_authentication_with 'alice'
 
     visit posts_path
 
