@@ -18,6 +18,7 @@ gem 'react-rails'
 gem 'redis'
 gem 'rouge'
 gem 'sass-rails'
+gem 'slack-ruby-client'
 gem 'slim-rails'
 gem 'truncate_html'
 gem 'uglifier', '>= 1.3.0'
@@ -28,6 +29,8 @@ group :development, :test do
   gem 'minitest-stub_any_instance'
   gem 'pry-byebug'
   gem 'tapp', git: 'https://github.com/5t111111/tapp.git', branch: 'add-decoration-feature'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

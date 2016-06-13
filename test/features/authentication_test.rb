@@ -1,11 +1,14 @@
 require 'test_helper'
 
-feature 'authorization' do
-  scenario 'can access posts page when logging in' do
+feature 'Authentication' do
+  scenario 'Can access posts page when logging in' do
     stub_slack_login_with 'alice'
 
     visit login_path
-    click_link 'Login with Slack'
+
+    VCR.use_cassette 'slack/users_info' do
+      click_link 'Login with Slack'
+    end
 
     visit posts_path
 
@@ -14,7 +17,7 @@ feature 'authorization' do
     end
   end
 
-  scenario 'cannot access posts page without logging in' do
+  scenario 'Cannot access posts page without logging in' do
     visit posts_path
 
     within '.flash-message__alert' do

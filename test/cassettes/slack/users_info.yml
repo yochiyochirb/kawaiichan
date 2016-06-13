@@ -1,0 +1,171 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://slack.com/api/users.list
+    body:
+      encoding: UTF-8
+      string: token=xoxp-1111111111-2222222222-33333333333-4444444444
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Slack Ruby Client/0.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Security-Policy:
+      - referrer no-referrer;
+      Date:
+      - Wed, 08 Jun 2016 03:41:37 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - users:read,read
+      X-Content-Type-Options:
+      - nosniff
+      X-Oauth-Scopes:
+      - identify,read,post,client,apps,admin
+      X-Xss-Protection:
+      - '0'
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 7a49a5db90ba76ca0979f931106b8254.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - ocGH7HdocZUOh8ez31Sk9f8kpF80rrAkpEjsKDlYaLA_nVSwEw7rWQ==
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "ok": true,
+          "members": [
+            {
+              "id": "U42424242",
+              "team_id": "T42424242",
+              "name": "alice",
+              "deleted": false,
+              "status": null,
+              "color": "9f69e7",
+              "real_name": "Alice Liddell",
+              "tz": "Asia/Tokyo",
+              "tz_label": "Japan Standard Time",
+              "tz_offset": 32400,
+              "profile": {
+                "avatar_hash": "424242424242",
+                "real_name": "",
+                "real_name_normalized": "",
+                "email": "alice@example.com",
+                "image_24": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_24.jpg",
+                "image_32": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_32.jpg",
+                "image_48": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_48.jpg",
+                "image_72": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_72.jpg",
+                "image_192": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_192.jpg",
+                "image_512": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_192.jpg",
+                "image_1024": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_192.jpg",
+                "image_original": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_original.jpg"
+              },
+              "is_admin": true,
+              "is_owner": true,
+              "is_primary_owner": true,
+              "is_restricted": false,
+              "is_ultra_restricted": false,
+              "is_bot": false,
+              "has_2fa": false
+            },
+            {
+              "id": "U66666666",
+              "team_id": "T66666666",
+              "name": "madhatter",
+              "deleted": false,
+              "status": null,
+              "color": "9f69e7",
+              "real_name": "The Mad Hatter",
+              "tz": "Asia/Tokyo",
+              "tz_label": "Japan Standard Time",
+              "tz_offset": 32400,
+              "profile": {
+                "avatar_hash": "666666666666",
+                "real_name": "",
+                "real_name_normalized": "",
+                "email": "madhatter@example.com",
+                "image_24": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_24.jpg",
+                "image_32": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_32.jpg",
+                "image_48": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_48.jpg",
+                "image_72": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_72.jpg",
+                "image_192": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_192.jpg",
+                "image_512": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_192.jpg",
+                "image_1024": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_192.jpg",
+                "image_original": "https://avatars.slack-edge.com/2015-10-15/66666666666666666666666666666666_original.jpg"
+              },
+              "is_admin": false,
+              "is_owner": false,
+              "is_primary_owner": false,
+              "is_restricted": false,
+              "is_ultra_restricted": false,
+              "is_bot": false,
+              "has_2fa": false
+            },
+            {
+              "id": "U88888888",
+              "team_id": "T66666666",
+              "name": "bill",
+              "deleted": true,
+              "status": null,
+              "color": "9f69e7",
+              "real_name": "Bill",
+              "tz": "Asia/Tokyo",
+              "tz_label": "Japan Standard Time",
+              "tz_offset": 32400,
+              "profile": {
+                "avatar_hash": "888888888888",
+                "real_name": "",
+                "real_name_normalized": "",
+                "email": "bill@example.com",
+                "image_24": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_24.jpg",
+                "image_32": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_32.jpg",
+                "image_48": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_48.jpg",
+                "image_72": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_72.jpg",
+                "image_192": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_192.jpg",
+                "image_512": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_192.jpg",
+                "image_1024": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_192.jpg",
+                "image_original": "https://avatars.slack-edge.com/2015-10-15/88888888888888888888888888888888_original.jpg"
+              },
+              "is_admin": false,
+              "is_owner": false,
+              "is_primary_owner": false,
+              "is_restricted": false,
+              "is_ultra_restricted": false,
+              "is_bot": false,
+              "has_2fa": false
+            }
+          ],
+          "cache_ts": 1465357297
+        }
+    http_version: 
+  recorded_at: Wed, 08 Jun 2016 03:41:36 GMT
+recorded_with: VCR 3.0.1
