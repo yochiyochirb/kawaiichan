@@ -3,10 +3,15 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'minitest/rails/capybara'
 require 'webmock/minitest'
+require 'capybara/poltergeist'
+
+Capybara.javascript_driver = :poltergeist
+Capybara.server = :puma
 
 VCR.configure do |config|
   config.cassette_library_dir = 'test/cassettes'
   config.hook_into :webmock
+  config.ignore_localhost = true
 end
 
 class ActiveSupport::TestCase
