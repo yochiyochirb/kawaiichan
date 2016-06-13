@@ -1,9 +1,11 @@
 .highlight {
-  border: 1px solid #ddd;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 2rem auto;
-  padding: 0.9rem;
+  border: 1px solid $border-gray;
+  margin: 1.8rem 0;
+  padding: .9rem;
+
+  code {
+    font-family: Inconsolata, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  }
 
   // GitHub style syntax highlighter for rouge
   .hll { background-color: #f8f8f8; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
