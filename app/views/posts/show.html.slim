@@ -4,7 +4,7 @@
       h1.post__title
         = @post.title
       .post__body
-        == sanitize(markdown_to_html(emojify(@post.body)))
+        == sanitize(auto_link(markdown_to_html(emojify(@post.body))))
       .post__author
         | posted by
         = " #{@post.user.nickname}"
