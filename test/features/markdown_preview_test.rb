@@ -10,7 +10,7 @@ feature 'MarkdownPreview' do
 
     fill_in 'post_title', with: title
 
-    within '#post-preview' do
+    within '.post__preview' do
       expect(page).must_have_content title
     end
   end
@@ -24,7 +24,7 @@ feature 'MarkdownPreview' do
 
     fill_in 'post_body', with: body
 
-    within '#post-preview' do
+    within '.post__preview' do
       expect(page).must_have_content body
     end
   end
@@ -40,7 +40,7 @@ feature 'MarkdownPreview' do
     fill_in 'post_title', with: title
     fill_in 'post_body', with: body
 
-    within '#post-preview' do
+    within '.post__preview' do
       expect(page).must_have_content title
       expect(page).must_have_content body
     end

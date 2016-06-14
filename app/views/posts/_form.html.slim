@@ -14,4 +14,6 @@
 .col.s6
   .post
     .post__body
-      #post-preview
+      = react_component('Preview',
+        content: render(partial: 'posts/preview',
+          locals: { title: @post.title, body: @post.body }))
