@@ -8,11 +8,11 @@
       .author
         .row
           .col.s3.offset-s9
-            .post-author__nickname style='font-size: .9rem;'
+            .author__nickname
               | Created by
               span.blue-text
                 |  #{@post.created_by.nickname}
-            .post-author__date.grey-text.text-darken-1 style='font-size: 0.8rem;'
+            .author__created_at.grey-text.text-darken-1
               = @post.created_at
 .row
   .col.s12
