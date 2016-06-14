@@ -7,8 +7,11 @@ concern :Authenticator do
     end
 
     def fetch_member_uids
+      team_info = Slack::Web::Client.new.team_info
       users_list = Slack::Web::Client.new.users_list
-      users_list.members.reject(&:deleted).map(&:id)
+      users_list.members.reject(&:deleted).map(&:id).map do |uid|
+        "#{uid}-#{team_info.team.id}"
+      end
     end
   end
 end

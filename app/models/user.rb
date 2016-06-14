@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   class << self
     def find_or_create_from(auth)
       find_or_create_by(provider: auth[:provider], uid: auth[:uid]) do |user|
-        user.nickname = auth[:info][:nickname]
+        user.nickname = auth[:info][:name]
       end
     end
   end
