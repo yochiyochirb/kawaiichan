@@ -7,7 +7,7 @@ feature 'Authentication' do
     visit posts_path
 
     within '.card-title', match: :first do
-      page.must_have_content posts(:alice_in_wonderland).title
+      expect(page).must_have_content posts(:alice_in_wonderland).title
     end
   end
 
@@ -15,11 +15,11 @@ feature 'Authentication' do
     visit posts_path
 
     within '.flash-message__alert' do
-      page.must_have_content 'Please login'
+      expect(page).must_have_content 'Please login'
     end
 
     within '.login__login-link' do
-      page.must_have_content 'Login with Slack'
+      expect(page).must_have_content 'Login with Slack'
     end
   end
 end

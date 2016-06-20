@@ -15,20 +15,20 @@ feature 'PostCreation' do
     click_button 'Save'
 
     within '.flash-message__notice' do
-      page.must_have_content 'Post was successfully created.'
+      expect(page).must_have_content 'Post was successfully created.'
     end
 
     within '.post__title' do
-      page.must_have_content title
+      expect(page).must_have_content title
     end
 
     within '.post__body' do
-      page.must_have_content body
+      expect(page).must_have_content body
     end
 
     post = Post.last
-    post.user.must_equal User.find_by!(nickname: 'alice')
-    post.title.must_equal title
-    post.body.must_equal body
+    expect(post.user).must_equal User.find_by!(nickname: 'alice')
+    expect(post.title).must_equal title
+    expect(post.body).must_equal body
   end
 end

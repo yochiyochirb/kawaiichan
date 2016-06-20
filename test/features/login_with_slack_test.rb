@@ -5,7 +5,7 @@ feature 'Login with slack' do
     visit login_path
 
     within '.login__login-link' do
-      page.must_have_content 'Login with Slack'
+      expect(page).must_have_content 'Login with Slack'
     end
   end
 
@@ -19,11 +19,11 @@ feature 'Login with slack' do
     end
 
     within '.flash-message__notice' do
-      page.must_have_content 'Logged in with Slack'
+      expect(page).must_have_content 'Logged in with Slack'
     end
 
     within '.navigation__list' do
-      page.must_have_content 'Logout'
+      expect(page).must_have_content 'Logout'
     end
   end
 
@@ -40,7 +40,7 @@ feature 'Login with slack' do
     end
 
     within '.flash-message__alert' do
-      page.must_have_content 'Only team member can login'
+      expect(page).must_have_content 'Only team member can login'
     end
   end
 end
