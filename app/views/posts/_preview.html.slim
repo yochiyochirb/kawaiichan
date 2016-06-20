@@ -1,2 +1,2 @@
 == sanitize(markdown_to_html(emojify("# #{title}"))) if title.present?
-== sanitize(markdown_to_html(emojify(body))) if body.present?
+== sanitize(auto_link(markdown_to_html(emojify(body)))) if body.present?
