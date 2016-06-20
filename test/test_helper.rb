@@ -3,10 +3,15 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'minitest/rails/capybara'
 require 'webmock/minitest'
+require 'capybara/poltergeist'
+
+Capybara.javascript_driver = :poltergeist
+Capybara.server = :puma
 
 VCR.configure do |config|
   config.cassette_library_dir = 'test/cassettes'
   config.hook_into :webmock
+  config.ignore_localhost = true
 end
 
 class ActiveSupport::TestCase
@@ -26,5 +31,19 @@ class ActiveSupport::TestCase
         nickname: user.nickname
       }
     )
+  end
+
+  # Stub whole authentication includes:
+  # - Slack OAuth login
+  # - Visiting login page
+  # - Team checking
+  def stub_authentication_with(nickname)
+    stub_slack_login_with(nickname)
+
+    visit login_path
+
+    VCR.use_cassette 'slack/users_info' do
+      click_link 'Login with Slack'
+    end
   end
 end

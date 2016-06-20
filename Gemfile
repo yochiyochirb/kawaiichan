@@ -27,6 +27,7 @@ group :development, :test do
   gem 'launchy'
   gem 'minitest-rails-capybara', github: 'blowmage/minitest-rails-capybara'
   gem 'minitest-stub_any_instance'
+  gem 'poltergeist'
   gem 'pry-byebug'
   gem 'tapp', git: 'https://github.com/5t111111/tapp.git', branch: 'add-decoration-feature'
   gem 'vcr'

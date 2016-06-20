@@ -1,10 +1,13 @@
 App.post = App.cable.subscriptions.create "PostChannel",
   connected: ->
     # Called when the subscription is ready for use on the server
-    @perform 'preview', source: {
-      title: document.getElementById('post_title').value,
-      body: document.getElementById('post_body').value
-    }
+
+    # TODO: It's better to create this channel only on editor page
+    if document.getElementById('post_title') != null
+      @perform 'preview', source: {
+        title: document.getElementById('post_title').value,
+        body: document.getElementById('post_body').value
+      }
 
   disconnected: ->
     # Called when the subscription has been terminated by the server
