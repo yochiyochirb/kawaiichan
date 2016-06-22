@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class AutoLinkHelperTest < ActionView::TestCase
-  include AutoLinkHelper
-
   test 'should auto link only urls' do
     assert_equal 'Hello <a href="http://example.com">http://example.com</a> mailto://test@example.com',
                  auto_link('Hello http://example.com mailto://test@example.com')
