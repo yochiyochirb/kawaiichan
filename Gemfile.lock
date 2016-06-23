@@ -304,7 +304,7 @@ DEPENDENCIES
   poltergeist
   pry-byebug
   puma
-  rails (>= 5.0.0.beta3, < 5.1)
+  rails (>= 5.0.0.rc2, < 5.1)
   rails_12factor
   react-rails
   redis
