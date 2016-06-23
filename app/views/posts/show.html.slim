@@ -7,7 +7,7 @@
         == sanitize(markdown_to_html(emojify(@post.body)))
       .post__author
         | posted by
-        = " #{@post.user.nickname}"
+        = " #{@post.created_by.nickname}"
 .row
   .col.s12
     = link_to edit_post_path(@post), class: 'waves-effect waves-light btn' do
