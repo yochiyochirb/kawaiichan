@@ -27,7 +27,7 @@ feature 'PostCreation' do
     end
 
     post = Post.last
-    expect(post.user).must_equal User.find_by!(nickname: 'alice')
+    expect(post.created_by).must_equal User.find_by!(nickname: 'alice')
     expect(post.title).must_equal title
     expect(post.body).must_equal body
   end
