@@ -22,7 +22,7 @@ class Post < ApplicationRecord
     def post_params_of(action)
       {
         channel: ENV['SLACK_POST_CHANNEL'],
-        text: "#{self.user.nickname} #{action}d *#{self.title}*.",
+        text: "#{self.created_by.nickname} #{action}d *#{self.title}*.",
         attachments: attachment(self),
         as_user: true
       }
