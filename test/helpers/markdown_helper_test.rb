@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class MarkdownHelperTest < ActionView::TestCase
-  include MarkdownHelper
-
   test 'should render markdown to html' do
     post = posts(:alice_in_wonderland)
 
