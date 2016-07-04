@@ -5,8 +5,12 @@ class Post < ApplicationRecord
 
   concerning :Notifiable do
     included do
-      after_create_commit :notify_to_create
-      after_update_commit :notify_to_update
+      after_create_commit :notify_to_create, unless: :test?
+      after_update_commit :notify_to_update, unless: :test?
+    end
+
+    def test?
+      Rails.env.test?
     end
 
     private
