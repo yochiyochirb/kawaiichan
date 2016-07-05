@@ -5,9 +5,15 @@
         = @post.title
       .post__body
         == sanitize(auto_link(markdown_to_html(emojify(@post.body))))
-      .post__author
-        | posted by
-        = " #{@post.created_by.nickname}"
+      .author
+        .row
+          .col.s3.offset-s9
+            .author__nickname
+              | Created by
+              span.blue-text
+                |  #{@post.created_by.nickname}
+            .author__created-at.grey-text.text-darken-1
+              = @post.created_at
 .row
   .col.s12
     = link_to edit_post_path(@post), class: 'waves-effect waves-light btn' do
