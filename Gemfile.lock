@@ -279,14 +279,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 4.2)
+  coffee-rails
   font-awesome-rails
   gemoji
-  jbuilder (~> 2.5)
+  jbuilder
   jquery-rails
   kramdown
   launchy
-  listen (~> 3.0.5)
+  listen
   materialize-sass
   minitest-rails-capybara
   minitest-stub_any_instance
@@ -294,22 +294,22 @@ DEPENDENCIES
   pg
   poltergeist
   pry-byebug
-  puma (~> 3.0)
+  puma
   rails (~> 5.0.0)
   rails_12factor
   react-rails
-  redis (~> 3.0)
+  redis
   rinku
   rouge (~> 1.11.0)
-  sass-rails (~> 5.0)
+  sass-rails
   slack-ruby-client
   slim-rails
   spring
-  spring-watcher-listen (~> 2.0.0)
+  spring-watcher-listen
   tapp!
   truncate_html
   tzinfo-data
-  uglifier (>= 1.3.0)
+  uglifier
   vcr
   web-console
   webmock

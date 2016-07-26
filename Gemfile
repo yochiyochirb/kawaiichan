@@ -4,25 +4,25 @@ ruby '2.3.1'
 
 gem 'rails', '~> 5.0.0'
 
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails'
 gem 'font-awesome-rails'
 gem 'gemoji'
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
 gem 'jquery-rails'
 gem 'kramdown'
 gem 'materialize-sass'
 gem 'omniauth-slack'
 gem 'pg'
-gem 'puma', '~> 3.0'
+gem 'puma'
 gem 'react-rails'
-gem 'redis', '~> 3.0'
+gem 'redis'
 gem 'rinku'
 gem 'rouge', '~> 1.11.0'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 gem 'slack-ruby-client'
 gem 'slim-rails'
 gem 'truncate_html'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 group :development, :test do
   gem 'launchy'
@@ -36,9 +36,9 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '~> 3.0.5'
+  gem 'listen'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
   gem 'web-console'
 end
 
