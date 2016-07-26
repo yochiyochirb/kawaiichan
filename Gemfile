@@ -17,7 +17,7 @@ gem 'puma'
 gem 'react-rails'
 gem 'redis'
 gem 'rinku'
-gem 'rouge', '~> 1.11.0'
+gem 'rouge', '~> 1.11.0' # Kramdown is not compatible with Rouge 2.0. See https://github.com/gettalong/kramdown/issues/350
 gem 'sass-rails'
 gem 'slack-ruby-client'
 gem 'slim-rails'
