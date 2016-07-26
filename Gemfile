@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
-gem 'rails', '>= 5.0.0.beta3', '< 5.1'
+gem 'rails', '~> 5.0.0'
 
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
 gem 'font-awesome-rails'
 gem 'gemoji'
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 gem 'jquery-rails'
 gem 'kramdown'
 gem 'materialize-sass'
@@ -17,16 +17,16 @@ gem 'puma'
 gem 'react-rails'
 gem 'redis'
 gem 'rinku'
-gem 'rouge'
+gem 'rouge', '~> 1.11.0' # Kramdown is not compatible with Rouge 2.0. See https://github.com/gettalong/kramdown/issues/350
 gem 'sass-rails'
 gem 'slack-ruby-client'
 gem 'slim-rails'
 gem 'truncate_html'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 group :development, :test do
   gem 'launchy'
-  gem 'minitest-rails-capybara', github: 'blowmage/minitest-rails-capybara'
+  gem 'minitest-rails-capybara'
   gem 'minitest-stub_any_instance'
   gem 'poltergeist'
   gem 'pry-byebug'
@@ -36,10 +36,10 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '~> 3.0.5'
+  gem 'listen'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', '~> 3.0'
+  gem 'spring-watcher-listen'
+  gem 'web-console'
 end
 
 group :production do
