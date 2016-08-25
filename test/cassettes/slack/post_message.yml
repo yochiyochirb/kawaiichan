@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://slack.com/api/chat.postMessage
+    body:
+      encoding: UTF-8
+      string: as_user=true&attachments=%5B%7B%22title%22%3A%22Through+the+Looking-Glass%2C+and+What+Alice+Found+There%22%2C%22title_link%22%3A%22http%3A%2F%2Flocalhost%3A3000%2Fposts%2F517818256%22%2C%22text%22%3A%22One+thing+was+certain%2C+that+the+white+kitten+had+nothing.%22%2C%22mrkdwn_in%22%3A%5B%22text%22%5D%7D%5D&channel=kawaiichan-test&text=alice+created+%2AThrough+the+Looking-Glass%2C+and+What+Alice+Found+There%2A.&token=xoxb-9999999999-999999999999999999999999
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Slack Ruby Client/0.7.5
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '338'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Security-Policy:
+      - referrer no-referrer;
+      Date:
+      - Thu, 25 Aug 2016 16:41:43 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - chat:write:user,client
+      X-Content-Type-Options:
+      - nosniff
+      X-Oauth-Scopes:
+      - identify,read,post,client,apps
+      X-Slack-Backend:
+      - h
+      X-Slack-Req-Id:
+      - 6eeb0e6d-ed15-4f3b-bea4-db66fe6be114
+      X-Xss-Protection:
+      - '0'
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 67e06da6c71da5f1c9fb2ca2b3a30988.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - Vldfzk6Z2MtO6AOzKEdyBy8KnvOVRGEheJueGWcRzUKWgCogY8F5UQ==
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "ok":true,
+          "channel":
+            "AAAAAAA",
+            "ts":"1472143303.000003",
+            "message":
+              {
+                "type":"message",
+                "user":"U12345678",
+                "text":"alice created *Through the Looking-Glass, and What Alice Found There*.",
+                "bot_id":"AAAAAAAAA",
+                "attachments": [
+                  {
+                    "text": "One thing was certain, that the white kitten had nothing.",
+                    "title": "Through the Looking-Glass, and What Alice Found There",
+                    "id":1,
+                    "title_link": "http:\/\/localhost:3000\/posts\/517818256",
+                    "mrkdwn_in": ["text"],
+                    "fallback": "NO FALLBACK DEFINED"
+                  }
+                ],
+                "ts": "1472143303.000003"
+              }
+        }
+    http_version: 
+  recorded_at: Thu, 25 Aug 2016 16:41:43 GMT
+recorded_with: VCR 3.0.3
