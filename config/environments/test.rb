@@ -42,4 +42,7 @@ Rails.application.configure do
 
   # Disable request forgery protection
   config.action_cable.disable_request_forgery_protection = true
+
+  # Kawaiichan's root url
+  config.kawaiichan_url = 'http://localhost:3000'
 end

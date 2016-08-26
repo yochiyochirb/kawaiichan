@@ -33,12 +33,10 @@ class Post < ApplicationRecord
     end
 
     def attachment(post)
-      domain = ENV['KAWAIICHAN_URL'] || 'http://localhost:3000'
-
       JSON.generate([
         {
           title: post.title,
-          title_link: "#{domain}/posts/#{post.id}",
+          title_link: "#{Rails.configuration.kawaiichan_url}/posts/#{post.id}",
           text: post.body,
           mrkdwn_in: ['text']
         }

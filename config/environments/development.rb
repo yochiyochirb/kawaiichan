@@ -54,4 +54,7 @@ Rails.application.configure do
 
   # react-rails
   config.react.variant = :development
+
+  # Kawaiichan's root url
+  config.kawaiichan_url = 'http://localhost:3000'
 end
