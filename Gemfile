@@ -5,6 +5,7 @@ ruby '2.3.1'
 gem 'rails', '~> 5.0.0'
 
 gem 'coffee-rails'
+gem 'dotenv-rails'
 gem 'font-awesome-rails'
 gem 'gemoji'
 gem 'jbuilder'
