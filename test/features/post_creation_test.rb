@@ -12,7 +12,9 @@ feature 'PostCreation' do
     fill_in 'post_title', with: title
     fill_in 'post_body', with: body
 
-    click_button 'Save'
+    VCR.use_cassette 'slack/post_message' do
+      click_button 'Save'
+    end
 
     within '.flash-message__notice' do
       expect(page).must_have_content 'Post was successfully created.'

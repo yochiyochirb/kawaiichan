@@ -86,4 +86,7 @@ Rails.application.configure do
 
   # react-rails
   config.react.variant = :production
+
+  # Kawaiichan's root url
+  config.kawaiichan_url = ENV['KAWAIICHAN_URL']
 end
