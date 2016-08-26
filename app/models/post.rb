@@ -33,7 +33,7 @@ class Post < ApplicationRecord
     end
 
     def attachment(post)
-      domain = Rails.env.production? ? 'https://kawaiichan.herokuapp.com' : 'http://localhost:3000'
+      domain = ENV['KAWAIICHAN_URL'] || 'http://localhost:3000'
 
       JSON.generate([
         {
