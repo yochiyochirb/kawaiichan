@@ -27,7 +27,9 @@ gem 'truncate_html'
 gem 'uglifier'
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'launchy'
+  gem 'minitest-around'
   gem 'minitest-rails-capybara'
   gem 'minitest-stub_any_instance'
   gem 'poltergeist'
