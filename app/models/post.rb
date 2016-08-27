@@ -24,7 +24,9 @@ class Post < ApplicationRecord
         channel: ENV['SLACK_POST_CHANNEL'],
         text: "#{self.created_by.nickname} #{action}d *#{self.title}*.",
         attachments: attachment(self),
-        as_user: true
+        as_user: false,
+        username: 'kawaiichan',
+        icon_emoji: ':new_moon_with_face:'
       }
     end
 
