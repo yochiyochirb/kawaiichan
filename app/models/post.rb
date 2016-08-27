@@ -7,8 +7,14 @@ class Post < ApplicationRecord
 
   concerning :Notifiable do
     included do
-      after_create_commit :notify_to_create
-      after_update_commit :notify_to_update
+      after_create_commit :notify_to_create if slack_notification_enabled?
+      after_update_commit :notify_to_update if slack_notification_enabled?
+    end
+
+    class_methods do
+      def slack_notification_enabled?
+        Rails.configuration.slack_notification_enabled
+      end
     end
 
     private

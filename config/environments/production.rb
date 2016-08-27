@@ -89,4 +89,7 @@ Rails.application.configure do
 
   # Kawaiichan's root url
   config.kawaiichan_url = ENV['KAWAIICHAN_URL']
+
+  # Enable/disable Slack notification
+  config.slack_notification_enabled = true
 end
