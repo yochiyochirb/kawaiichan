@@ -3,6 +3,8 @@ class Post < ApplicationRecord
 
   validates :title, presence: true
 
+  has_paper_trail
+
   concerning :Notifiable do
     included do
       after_create_commit :notify_to_create
