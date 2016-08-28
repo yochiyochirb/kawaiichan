@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160827120218) do
+ActiveRecord::Schema.define(version: 20160828130911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,9 @@ ActiveRecord::Schema.define(version: 20160827120218) do
     t.integer  "created_by_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "updated_by_id"
     t.index ["created_by_id"], name: "index_posts_on_created_by_id", using: :btree
+    t.index ["updated_by_id"], name: "index_posts_on_updated_by_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,4 +46,5 @@ ActiveRecord::Schema.define(version: 20160827120218) do
   end
 
   add_foreign_key "posts", "users", column: "created_by_id"
+  add_foreign_key "posts", "users", column: "updated_by_id"
 end
