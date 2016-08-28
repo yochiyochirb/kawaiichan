@@ -5,6 +5,14 @@ class Post < ApplicationRecord
 
   has_paper_trail
 
+  before_validation :copy_created_by_id_to_updated_by_id, on: :create
+
+  private
+
+  def copy_created_by_id_to_updated_by_id
+    self.updated_by_id = created_by_id
+  end
+
   concerning :Notifiable do
     included do
       after_create_commit :notify_to_create if slack_notification_enabled?
