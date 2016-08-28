@@ -57,4 +57,7 @@ Rails.application.configure do
 
   # Kawaiichan's root url
   config.kawaiichan_url = 'http://localhost:3000'
+
+  # Enable/disable Slack notification
+  config.slack_notification_enabled = false
 end
