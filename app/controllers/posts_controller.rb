@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update(post_params)
+    if @post.update(post_params.merge(updated_by_id: current_user.id))
       redirect_to @post, notice: 'Post was successfully updated.'
     else
       render :edit
