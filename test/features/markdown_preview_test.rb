@@ -5,6 +5,7 @@ feature 'MarkdownPreview' do
     stub_authentication_with 'alice'
 
     visit new_post_path
+    wait_action_cable_subscription
 
     title = 'Through the Looking-Glass, and What Alice Found There'
 
@@ -19,6 +20,7 @@ feature 'MarkdownPreview' do
     stub_authentication_with 'alice'
 
     visit new_post_path
+    wait_action_cable_subscription
 
     body = 'One thing was certain, that the white kitten had nothing.'
 
@@ -33,6 +35,7 @@ feature 'MarkdownPreview' do
     stub_authentication_with 'alice'
 
     visit new_post_path
+    wait_action_cable_subscription
 
     title = 'Through the Looking-Glass, and What Alice Found There'
     body = 'One thing was certain, that the white kitten had nothing.'

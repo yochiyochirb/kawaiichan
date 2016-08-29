@@ -62,5 +62,8 @@ class Capybara::Rails::TestCase
     end
   end
 
+  # Wait a sec because tests will fail if a channel is not subscribed yet
+  def wait_action_cable_subscription
+    sleep 1
   end
 end
