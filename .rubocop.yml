@@ -1,0 +1,39 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'db/schema.rb'
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 10
+  Exclude:
+    - 'db/migrate/*.rb'
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Exclude:
+    - 'db/migrate/*.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/IndentationConsistency:
+  EnforcedStyle: rails
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/IfInsideElse:
+  Enabled: false
