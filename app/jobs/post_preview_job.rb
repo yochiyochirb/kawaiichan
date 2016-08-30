@@ -8,11 +8,11 @@ class PostPreviewJob < ApplicationJob
 
   private
 
-  def render_preview(source)
-    ApplicationController.renderer.render partial: "posts/preview",
-                                          locals: {
-                                            title: source["title"],
-                                            body: source["body"]
-                                          }
-  end
+    def render_preview(source)
+      ApplicationController.renderer.render partial: "posts/preview",
+                                            locals: {
+                                              title: source["title"],
+                                              body: source["body"]
+                                            }
+    end
 end

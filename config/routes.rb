@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: "posts#index"
-  resources :users, only: %i( index show )
+  resources :users, only: %i(index show)
   resources :posts
 
   get "login", to: "sessions#new"
