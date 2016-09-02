@@ -15,6 +15,10 @@
             .author__created-at.grey-text.text-darken-1
               = @post.created_at
 
+  = form_for @comment, url: post_comments_path(@post) do |f|
+    = f.text_field :body
+    = f.submit
+
   - @comments.each do |comment|
     .comment
       .author
