@@ -16,8 +16,14 @@
               = @post.created_at
 
   - @comments.each do |comment|
-    = comment.commented_by.nickname
-    == sanitize(auto_link(markdown_to_html(emojify(comment.body))))
+    .comment
+      .author
+        .author__nickname
+          = comment.commented_by.nickname
+        .author__created-at
+          = comment.created_at
+      .comment__body
+        == sanitize(auto_link(markdown_to_html(emojify(comment.body))))
 
 .row
   .col.s12
