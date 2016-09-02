@@ -4,6 +4,8 @@ require 'rails/test_help'
 require 'minitest/rails/capybara'
 require 'webmock/minitest'
 require 'capybara/poltergeist'
+require 'minitest/around'
+require 'database_cleaner'
 
 Capybara.javascript_driver = :poltergeist
 Capybara.server = :puma
@@ -13,6 +15,8 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.ignore_localhost = true
 end
+
+DatabaseCleaner.strategy = :truncation
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
@@ -45,5 +49,21 @@ class ActiveSupport::TestCase
     VCR.use_cassette 'slack/users_info' do
       click_link 'Login with Slack'
     end
+  end
+end
+
+class Capybara::Rails::TestCase
+  around do |test|
+    if metadata[:js]
+      page.driver.clear_memory_cache
+      DatabaseCleaner.cleaning(&test)
+    else
+      test.call
+    end
+  end
+
+  # Wait a sec because tests will fail if a channel is not subscribed yet
+  def wait_action_cable_subscription
+    sleep 1
   end
 end
