@@ -37,3 +37,6 @@ Style/Lambda:
 
 Style/IfInsideElse:
   Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
