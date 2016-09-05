@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160827120218) do
     t.text     "body",            null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["commented_by_id"], name: "index_comments_on_commented_by_id", using: :btree
   end
 
   create_table "posts", force: :cascade do |t|
@@ -51,5 +52,6 @@ ActiveRecord::Schema.define(version: 20160827120218) do
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
   end
 
+  add_foreign_key "comments", "users", column: "commented_by_id"
   add_foreign_key "posts", "users", column: "created_by_id"
 end
