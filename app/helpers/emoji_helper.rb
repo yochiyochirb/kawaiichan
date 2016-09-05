@@ -1,6 +1,6 @@
 module EmojiHelper
   def emojify(content)
-    return '' if content.blank?
+    return "" if content.blank?
     content.gsub(/:([\w+-]+):/) do |match|
       if emoji = Emoji.find_by_alias(Regexp.last_match[1])
         %(<img alt="#{Regexp.last_match[1]}" ) \

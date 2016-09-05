@@ -11,6 +11,6 @@ class PostChannel < ApplicationCable::Channel
 
   def preview(data)
     PostPreviewJob.perform_later(channel_id: @post_channel_id,
-                                 source: data['source'])
+                                 source: data["source"])
   end
 end

@@ -15,7 +15,7 @@ Rails.application.configure do
   # Configure public file server for tests with Cache-Control for performance.
   config.public_file_server.enabled = true
   config.public_file_server.headers = {
-    'Cache-Control' => 'public, max-age=3600'
+    "Cache-Control" => "public, max-age=3600"
   }
 
   # Show full error reports and disable caching.
@@ -44,7 +44,7 @@ Rails.application.configure do
   config.action_cable.disable_request_forgery_protection = true
 
   # Kawaiichan's root url
-  config.kawaiichan_url = 'http://localhost:3000'
+  config.kawaiichan_url = "http://localhost:3000"
 
   # Enable/disable Slack notification
   config.slack_notification_enabled = true
