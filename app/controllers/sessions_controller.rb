@@ -1,16 +1,16 @@
 class SessionsController < ApplicationController
   before_action :require_login, only: :destroy
 
-  layout 'sessions'
+  layout "sessions"
 
   def new
   end
 
   def create
-    auth = request.env['omniauth.auth']
+    auth = request.env["omniauth.auth"]
 
     unless User.team_member?(auth[:uid])
-      return redirect_to login_url, alert: 'Only team member can login'
+      return redirect_to login_url, alert: "Only team member can login"
     end
 
     user = User.find_or_create_from(auth)
@@ -23,10 +23,10 @@ class SessionsController < ApplicationController
   def destroy
     reset_session
     cookies.delete(:user_id)
-    redirect_to login_url, notice: 'Logged out'
+    redirect_to login_url, notice: "Logged out"
   end
 
   def failure
-    redirect_to login_url, alert: 'Failed to login'
+    redirect_to login_url, alert: "Failed to login"
   end
 end

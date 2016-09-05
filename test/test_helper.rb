@@ -1,17 +1,17 @@
-ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
-require 'rails/test_help'
-require 'minitest/rails/capybara'
-require 'webmock/minitest'
-require 'capybara/poltergeist'
-require 'minitest/around'
-require 'database_cleaner'
+ENV["RAILS_ENV"] ||= "test"
+require File.expand_path("../../config/environment", __FILE__)
+require "rails/test_help"
+require "minitest/rails/capybara"
+require "webmock/minitest"
+require "capybara/poltergeist"
+require "minitest/around"
+require "database_cleaner"
 
 Capybara.javascript_driver = :poltergeist
 Capybara.server = :puma
 
 VCR.configure do |config|
-  config.cassette_library_dir = 'test/cassettes'
+  config.cassette_library_dir = "test/cassettes"
   config.hook_into :webmock
   config.ignore_localhost = true
 end
@@ -29,7 +29,7 @@ class ActiveSupport::TestCase
     OmniAuth.config.test_mode = true
 
     OmniAuth.config.mock_auth[:slack] = OmniAuth::AuthHash.new(
-      provider: 'slack',
+      provider: "slack",
       uid: user.uid,
       info: {
         nickname: user.nickname
@@ -46,8 +46,8 @@ class ActiveSupport::TestCase
 
     visit login_path
 
-    VCR.use_cassette 'slack/users_info' do
-      click_link 'Login with Slack'
+    VCR.use_cassette "slack/users_info" do
+      click_link "Login with Slack"
     end
   end
 end

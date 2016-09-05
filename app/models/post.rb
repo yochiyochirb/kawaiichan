@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  belongs_to :created_by, class_name: 'User'
+  belongs_to :created_by, class_name: "User"
 
   validates :title, presence: true
 
@@ -29,12 +29,12 @@ class Post < ApplicationRecord
 
     def post_params_of(action)
       {
-        channel: ENV['SLACK_POST_CHANNEL'],
+        channel: ENV["SLACK_POST_CHANNEL"],
         text: "#{self.created_by.nickname} #{action}d *#{self.title}*.",
         attachments: attachment(self),
         as_user: false,
-        username: 'kawaiichan',
-        icon_emoji: ':new_moon_with_face:'
+        username: "kawaiichan",
+        icon_emoji: ":new_moon_with_face:"
       }
     end
 
@@ -48,7 +48,7 @@ class Post < ApplicationRecord
           title: post.title,
           title_link: "#{Rails.configuration.kawaiichan_url}/posts/#{post.id}",
           text: post.body,
-          mrkdwn_in: ['text']
+          mrkdwn_in: ["text"]
         }
       ])
     end

@@ -1,7 +1,7 @@
-require 'test_helper'
+require "test_helper"
 
 class MarkdownHelperTest < ActionView::TestCase
-  test 'should render markdown to html' do
+  test "should render markdown to html" do
     post = posts(:alice_in_wonderland)
 
     expected = <<-EOS
@@ -23,7 +23,7 @@ and of having nothing to do.</p>
     assert_equal(expected, markdown_to_html(post.body))
   end
 
-  test 'fenced code block rendered as expected' do
+  test "fenced code block rendered as expected" do
     post = posts(:fenced_code_block)
 
     expected = <<-EOS
@@ -37,8 +37,8 @@ and of having nothing to do.</p>
     assert_equal(expected, markdown_to_html(post.body))
   end
 
-  test 'should return blank string if source is blank' do
-    assert_equal('', markdown_to_html(''))
-    assert_equal('', markdown_to_html(nil))
+  test "should return blank string if source is blank" do
+    assert_equal("", markdown_to_html(""))
+    assert_equal("", markdown_to_html(nil))
   end
 end
