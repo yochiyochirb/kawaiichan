@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
     # Use cookies for ActionCable authorization
     cookies.signed[:user_id] = session[:user_id] = user.id
-    redirect_to root_url, notice: 'Logged in with Slack'
+    redirect_to root_url, notice: "Logged in with Slack"
   end
 
   def destroy
