@@ -4,4 +4,3 @@ module MarkdownHelper
     Kramdown::Document.new(source, input: "GFM", syntax_highlighter: "rouge").to_html
   end
 end
-

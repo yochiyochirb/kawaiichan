@@ -30,7 +30,7 @@ class Post < ApplicationRecord
     def post_params_of(action)
       {
         channel: ENV["SLACK_POST_CHANNEL"],
-        text: "#{self.created_by.nickname} #{action}d *#{self.title}*.",
+        text: "#{created_by.nickname} #{action}d *#{title}*.",
         attachments: attachment(self),
         as_user: false,
         username: "kawaiichan",
@@ -43,14 +43,16 @@ class Post < ApplicationRecord
     end
 
     def attachment(post)
-      JSON.generate([
-        {
-          title: post.title,
-          title_link: "#{Rails.configuration.kawaiichan_url}/posts/#{post.id}",
-          text: post.body,
-          mrkdwn_in: ["text"]
-        }
-      ])
+      JSON.generate(
+        [
+          {
+            title: post.title,
+            title_link: "#{Rails.configuration.kawaiichan_url}/posts/#{post.id}",
+            text: post.body,
+            mrkdwn_in: ["text"]
+          }
+        ]
+      )
     end
   end
 end
