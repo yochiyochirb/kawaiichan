@@ -94,7 +94,7 @@ linters:
     severity: warning
   SelectorFormat:
     enabled: true
-    convention: hyphenated_lowercase
+    convention: hyphenated_BEM
   Shorthand:
     enabled: true
     severity: warning
