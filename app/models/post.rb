@@ -31,7 +31,7 @@ class Post < ApplicationRecord
       {
         channel: ENV["SLACK_POST_CHANNEL"],
         text: "#{created_by.nickname} #{action}d *#{title}*.",
-        attachments: attachment(self),
+        attachments: attachment,
         as_user: false,
         username: "kawaiichan",
         icon_emoji: ":new_moon_with_face:"
@@ -42,13 +42,13 @@ class Post < ApplicationRecord
       @client ||= Slack::Web::Client.new
     end
 
-    def attachment(post)
+    def attachment
       JSON.generate(
         [
           {
-            title: post.title,
-            title_link: "#{Rails.configuration.kawaiichan_url}/posts/#{post.id}",
-            text: post.body,
+            title: title,
+            title_link: "#{Rails.configuration.kawaiichan_url}/posts/#{id}",
+            text: body,
             mrkdwn_in: ["text"]
           }
         ]
