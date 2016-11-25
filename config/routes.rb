@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: "posts#index"
   resources :users, only: %i(index show)
-  resources :posts
+  resources :posts do
+    resources :comments, only: %i(index new create)
+  end
 
   get "login", to: "sessions#new"
   get "auth/:provider/callback", to: "sessions#create"

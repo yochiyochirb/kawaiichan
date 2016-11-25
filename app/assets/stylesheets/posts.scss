@@ -77,18 +77,18 @@
   ol {
     @extend %post-list-common;
   }
-}
 
-.author {
-  border-top: 1px solid $border-gray;
-  padding: 1.5rem 0;
-  text-align: right;
-}
+  .author {
+    border-top: 1px solid $border-gray;
+    padding: 1.5rem 0;
+    text-align: right;
+  }
 
-.author__nickname {
-  font-size: .9rem
-}
+  .author__nickname {
+    font-size: .9rem
+  }
 
-.author__created-at {
-  font-size: .8rem
+  .author__created-at {
+    font-size: .8rem
+  }
 }

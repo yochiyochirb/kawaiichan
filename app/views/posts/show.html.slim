@@ -14,6 +14,21 @@
                 |  #{@post.created_by.nickname}
             .author__created-at.grey-text.text-darken-1
               = @post.created_at
+
+  = form_for @comment, url: post_comments_path(@post) do |f|
+    = f.text_field :body
+    = f.submit
+
+  - @comments.each do |comment|
+    .comment
+      .author
+        .author__nickname
+          = comment.commented_by.nickname
+        .author__created-at
+          = comment.created_at
+      .comment__body
+        == sanitize(auto_link(markdown_to_html(emojify(comment.body))))
+
 .row
   .col.s12
     = link_to edit_post_path(@post), class: 'waves-effect waves-light btn' do
